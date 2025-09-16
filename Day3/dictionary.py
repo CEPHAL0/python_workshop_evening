@@ -1,5 +1,5 @@
 # Dictionary Definition
-marks = {"sharad":99, "ranjan": 85, "saugat": 45, "slok":99}
+marks = {"sharad": 99, "ranjan": 85, "saugat": 45, "slok": 99}
 
 # Access value
 sharad_marks = marks["sharad"]
@@ -8,7 +8,13 @@ sharad_marks = marks["sharad"]
 marks["binod"] = 90
 
 # Edit value
-marks["sharad"]= 89
+marks["sharad"] = 89
 
 # Delete value
 del marks["sharad"]
+
+
+# Input directly to dictionary
+mydict = {"name": input("Enter the name: "), "address": input("Enter the address: ")}
+
+print(mydict)
