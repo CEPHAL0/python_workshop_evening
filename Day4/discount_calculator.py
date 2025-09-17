@@ -6,6 +6,7 @@
 
 # Calculate the final amount and print in a bill like format
 
+
 """
 Item    Price   Discount Price
 ------------------------------
