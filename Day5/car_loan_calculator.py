@@ -1,17 +1,25 @@
-# Initial Price = 65,00,000
+initial_price = 6500000
+tenure_in_months = 60
 
-# Tenure -> 60 months
+downpayment = float(input("Enter how much % you want to put as down payment: "))
 
-# Downpayment % -> Interest Rate %
-# 20% -> 17%
-# 30% -> 16%
-# 40% -> 15%
-# 50% -> 13%
+if downpayment > 50:
+    interest = 13
+elif downpayment > 40:
+    interest = 15
+elif downpayment > 30:
+    interest = 16
+else:
+    interest = 20
 
-# Example 20% Downpayment: 13,00,000
+paid_amount = (downpayment/100) * initial_price
 
-# Remaining Amount = 52,00,000
+remaining_amount = initial_price - paid_amount
 
-# Total Interest to Pay = 52,00,000 * 0.17 * 5 -> 44,20,000
+interest_amount = (remaining_amount * (tenure_in_months/12) * interest)/100
 
-# Total Amount to pay monthly = 52,00,000 + 44,20,000 / 60
+total_amount = remaining_amount + interest_amount
+
+amount_monthly = total_amount / tenure_in_months
+
+print(f"The initial price was Rs.{initial_price}, you applied downpayment of {downpayment}% which is Rs.{paid_amount}, now you have to pay total of Rs.{total_amount} and monthly payment will be Rs.{amount_monthly}")
