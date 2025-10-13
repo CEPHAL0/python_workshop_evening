@@ -6,9 +6,10 @@ balance = 10000
 
 # Function Definition
 def deposit_amount():
+    global balance
     amount = int(input("Enter the amount you want to deposit: "))
     balance += amount
-    print(f"You have successfully deposited {amount}")
+    print(f"You have successfully deposited {amount}, new balance is {balance}")
 
 # Function Call
 deposit_amount()
